@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+
+  payment:
+    image: serpe/payment
+
+    ports:
+      - "9090:9090"
+    network_mode: "host"
+
+  tomee:
+    image: serpe/tomee
+
+    ports:
+      - "8080:8080"
+    network_mode: "host"
